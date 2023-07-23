@@ -8,7 +8,7 @@ function Home() {
       <Container>
       <Row className="aligh-items-center">
         <Col xs={12} md={6} xl={7}>
-          <span className='tagline'>Welcome in to my Portfolio</span>
+          <span className='tagline'>Welcome in to my Portfolio.</span>
 
 
         </Col>
