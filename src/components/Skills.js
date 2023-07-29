@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+
 import { Col, Container, Row } from 'react-bootstrap';
+import Progressbar from './Progressbar';
 import  './Skills.css';
 
 
@@ -14,38 +15,29 @@ function Skills() {
           <Col>
           <div className='skill-bx'>
             <h2>
-             Back-end
+             Backend
             </h2>
-            
-            <div className="progress-bar">
-         
-          <div className="progress" style={{ width: `${60}%` }}>
-            <span className="percentage">60%</span>
+            <Progressbar text="Java" percentage={90} />
+            <Progressbar text="J2EE" percentage={90} />
+            <Progressbar text="Spring Boot" percentage={80} />
+            <Progressbar text="Python" percentage={80} />
+            <Progressbar text="Flask" percentage={70} />
           </div>
-        </div>
-        <div className="progress-bar">
-          <div className="progress" style={{ width: `${80}%` }}>
-            <span className="percentage">80%</span>
-          </div>
-        </div>
-           
-           
-          </div>
-          
-      
           </Col>
+          
           <Col>
           <div className='skill-bx'>
             <h2>
-              Front-end
+              Frontend
             </h2>
-            <p>
-
-            </p>
-          
-           
+          <Progressbar text="Html" percentage={80}/>
+          <Progressbar text="CSS" percentage={60}/>
+          <Progressbar text="JavaScript" percentage={60}/>
+          <Progressbar text=" React Js" percentage={80}/>
           </div>
           </Col>
+
+          
           <Col>
           <div className='skill-bx'>
             <h2>
