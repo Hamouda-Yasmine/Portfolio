@@ -1,6 +1,7 @@
 
 import { Col, Container, Row } from 'react-bootstrap';
 import Progressbar from './Progressbar';
+import CircularProgressBar from './CircularProgressBar';
 import  './Skills.css';
 
 
@@ -43,8 +44,10 @@ function Skills() {
             <h2>
               Qualities
             </h2>
-            <p>blabla</p>
-          
+            
+            <CircularProgressBar text="Creativity" percentage={90}/>
+            <CircularProgressBar text="Diplomacy" percentage={80}/>
+            <CircularProgressBar text="Flexibility" percentage={90}/>
            
           </div>
           </Col>

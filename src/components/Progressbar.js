@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef} from 'react'
 import './Skills.css'
 //import { useLocation } from 'react-router-dom';
 
 function Progressbar(props) {
  const progressBarRef=useRef(null);
- const [animation,setAnimation]=useState(false);
+ 
  
 
 
@@ -17,16 +17,11 @@ function Progressbar(props) {
 
     // Callback function for the ref
     const updateProgressBar = () => {
-      if (progressBarRef.current) {
+      if (progressBarRef.current && currentWidth < targetWidth) {
         currentWidth += increment;
         progressBarRef.current.style.width = `${currentWidth}%`;
-
-        // Check if the target width is reached
-        if (currentWidth >= targetWidth) {
-          setAnimation(true);
-        } else {
-          requestAnimationFrame(updateProgressBar);
-        }
+        requestAnimationFrame(updateProgressBar);
+        
       }
     };
 
@@ -45,7 +40,7 @@ function Progressbar(props) {
      <div>
       <span className='text'>{props.text}</span>
       <div className="progress-bar">
-        <div className={`progress ${animation? 'animate' : ''}`} ref={progressBarRef}>
+        <div className="progress" ref={progressBarRef}>
           <span className="percentage">{props.percentage}%</span>
         </div>
       </div>
