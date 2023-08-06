@@ -16,27 +16,26 @@
 }
 
 /************ Default Css ************/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 75px;
+
 }
 
 body {
+ 
   font-weight: 400;
   overflow-x: hidden;
-  position: relative;
-  background-color: #c1e4fc !important;
-  color: #ffffff !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #fbd8dd, #ffffca) !important;
+
+ 
   font-family: 'Centra', sans-serif !important;
 }
 
-/************ Navbar Css ************/
+/************ Navbar Css  ************/
 
 /************ Home Css ************/
 .home {
@@ -124,10 +123,12 @@ body {
   }
 }
 
+
+
+
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  padding: 300px 0 0 0;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

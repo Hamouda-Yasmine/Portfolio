@@ -1,0 +1,44 @@
+/* YourComponent.css */
+.navbar{
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+ 
+  padding-top: 10px;
+}
+.navbar-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color:#0000009c;
+  border-radius: 50px;
+  transition: color 0.5s ease-in-out;
+}
+
+.navbar-link.active {
+  color: #424242!important;
+  background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(100px);
+   
+
+}
+
+/* Add the line under the link items */
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  
+  background-color: #fca4a4;
+  /* Line color */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Increase the line width when hovering */
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+  text-align: center;
+}
+
