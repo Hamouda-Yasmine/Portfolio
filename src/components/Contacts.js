@@ -1,43 +1,61 @@
 import React, { useState } from 'react'
 import { Col, Container,  Row } from 'react-bootstrap'
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser'
+import './Contact.css'
 
 function Contacts() {
   const formInputs={
     name:'',
     email:'',
-    message:''
+    message:'',
 }
- const [inputs,setInputs]=useState(formInputs);
+ const [inputs,setInputs]=useState(formInputs)
  
- const [louding,setLounding]=useState(false);
+ const [loading,setLoading]=useState(false)
  const formUpdate=(e) => {
- const [name,value]=e.target;
-            setInputs({...inputs,
-                       [name]:value})
+ const {name,value}=e.target;
+ setInputs({...inputs,[name]: value})
 }
 const sendMessage=(e)=>{
   e.preventDefault();
-  setLounding(true);
+  setLoading(true);
      // Configure your email service credentials
-     const serviceID = 'YOUR_SERVICE_ID';
-     const templateID = 'YOUR_TEMPLATE_ID';
-     const userID = 'YOUR_USER_ID';
- 
-     emailjs.sendForm(serviceID, templateID, inputs, userID)
+     const serviceID = 'service_qqk7x7d';
+     const templateID = 'template_pyeqni9';
+     const userID = 'ni2Z2A4U1u0-T18Ug';
+     const formObject={
+      from_name: inputs.name,
+      to_name: 'Hamouda yasmine',
+      from_email: inputs.email ,
+      to_email:'hamouda.yasmine9@gmail.com',
+      message: inputs.message,
+      reply_to: inputs.email,
+     }
+      
+     emailjs.send(serviceID, templateID, formObject, userID)
        .then((response) => {
-        setLounding(false);
+        setLoading(false);
          console.log('Email sent successfully!', response);
+         setInputs({
+          name:'',
+          email:'',
+          message:''
+         })
        })
        .catch((error) => {
-        setLounding(false);
+        setLoading(false);
          console.error('Error sending email:', error);
+         setInputs({
+          name:'',
+          email:'',
+          message:''
+         })
        });
 
 };
 
   return (
-    <section className='contact' id="connect">
+    <section className='contact-form' id="connect">
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
@@ -52,13 +70,13 @@ const sendMessage=(e)=>{
                 </Col>
               
                 <Col sm={6} className='px-1'>
-                  <input type="email" name="email" value={inputs.email} placeholder='Your Email' onChange={formUpdate}></input>
+                  <input type="email" name='email' value={inputs.email} placeholder='Your Email' onChange={formUpdate}></input>
                   
                 </Col>
                
                 <Col className='px-1'>
                   <textarea rows="6" name='message' value={inputs.message} placeholder='Message'onChange={formUpdate}></textarea>
-                  <button type="submit"><span>{louding?'is louding...':'Send'}</span></button>
+                  <button type="submit"><span>{loading?'is louding...':'Send'}</span></button>
                 </Col>
 
 
