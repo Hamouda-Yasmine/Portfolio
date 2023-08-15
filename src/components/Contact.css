@@ -1,0 +1,66 @@
+/* ContactForm.css */
+
+/* Apply general styles to the whole form section */
+
+.contact-form{
+  padding: 100px 0 100px 0;
+}
+  
+  
+ 
+  
+  /* Style the form elements */
+  .contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+ 
+  
+ .contact-form input{
+   
+    margin-bottom: 20px;
+    border: 1px solid #aa03f8dd;
+    
+    border-radius: 50px ;
+  }
+  .contact-form input:focus {
+    border-color: #c300ffbc ; /* Change to your desired focus border color */
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 247, 0.477); /* Adjust as needed */
+  }
+  .contact-form textarea:focus{
+    border-color: #c300ffbc ; /* Change to your desired focus border color */
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 247, 0.477); /* Adjust as needed */
+  
+  }
+  
+  .contact-form textarea{
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #aa03f8dd;
+  
+    border-radius: 30px;
+  }
+   .contact-form input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa; /* Adjust the color as needed */
+    z-index: 1;
+  }
+
+  .contact-form icon {
+    font-size: 1em; /* Adjust the icon size as needed */
+  }
+
+  .contact-form custom-input {
+    padding-left: 2.5em; /* Add space for the icon */
+  }
+  
+ 
+  
+  
+  
+ 
+  

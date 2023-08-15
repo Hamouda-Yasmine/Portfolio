@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef} from 'react'
 import "./CircularProgressBar.css"
 function CircularProgressBar(props) {
     const progressBarRef = useRef(null);
-    const [animation, setAnimation] = useState(false);
+    
   
     useEffect(() => {
       let currentPercentage = 0;
