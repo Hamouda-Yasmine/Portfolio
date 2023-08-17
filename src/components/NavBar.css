@@ -1,16 +1,21 @@
 /* YourComponent.css */
 .navbar{
-  
+
   backdrop-filter: blur(5px);
- 
+  font-size: large;
   padding-top: 10px;
+  color: rgb(4, 4, 4);
+ 
+  
 }
 .navbar-link {
-  position: relative;
+  position:relative;
   padding: 0.5rem 1rem;
-  color:#000000c3;
-  
+  color:#000000f4;
+  font-size: medium;
+  font-weight: 500;
   transition: color 0.5s ease-in-out;
+  
 }
 
 .navbar-link.active {
@@ -25,6 +30,7 @@
 .navbar-link::after {
   content: '';
   position: absolute;
+  padding-top: 0%;
   bottom: 0;
   left: 0;
   width: 0;

@@ -91,6 +91,7 @@ const sendMessage=(e)=>{
       <Form.Group className="mb-3" >
        
         <Form.Control size='lg' as="textarea" rows={7} name='message' value={inputs.message} placeholder='Message'onChange={formUpdate} required/>
+        
       </Form.Group>
 
      
