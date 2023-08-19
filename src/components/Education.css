@@ -1,0 +1,21 @@
+.education{
+    margin-top: 0;
+    padding: 50px 0 100px 0;
+   flex:content;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.education-bx {
+    /*background: hsla(0, 0%, 100%, 0.6);*/
+    background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(100px);
+      border-radius: 64px;
+    text-align: center;
+   flex: content;
+      padding: 50px 60px;
+      box-shadow: rgba(67, 67, 91, 0.086) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+   
+   
+    }
+   
