@@ -9,26 +9,27 @@ function Education() {
   const [selectedSection,setSelectedSection]=useState('education');
   
  const timelineEducation = [
-    { leval: 'Step 1: Introduction',
-      place:'' ,
+    { level: 'Masters degree in software engineering',
+      place:'Abdelhamid Mehri University, Constantine' ,
       year:2022},
-      { leval: 'Step 1: Introduction',
-      place:'' ,
-      year:2022},
-      { leval: 'Step 1: Introduction',
-      place:'' ,
-      year:2022},
+      { level: 'Bachelor degree in software engineering',
+      place:'Abdelhamid Mehri University, Constantine' ,
+      year:2020},
+      { level: 'Baccalaureate',
+      place:'Science' ,
+      year:2017},
    ];
 
    const timelineCertificate = [
-    { name: 'Step 1: Introduction',
-      place:'' ,
-      year:2022},
-      { name: 'Step 1: Introduction',
-      place:'' ,
-      year:2022},
+    { name: 'React Basics (Meta)',
+      place:'coursera' ,
+      year:2023},
+      { name: 'CCNA 200-301 introduction to network',
+      place:'CISCO' ,
+      year:'2022-2023'},
      
    ];
+   //const timelineExperience=[]
   return (
     <section className='education'>
   <Container>
