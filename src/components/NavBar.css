@@ -1,20 +1,24 @@
 /* YourComponent.css */
+
 .navbar{
 
   backdrop-filter: blur(5px);
-  font-size: large;
-  padding-top: 10px;
+  font-size: 1.2rem !important;
+
   color: rgb(4, 4, 4);
+  transition: all 0.3s ease-out 0s !important;
+  padding-top:20px!important;
  
   
 }
 .navbar-link {
-  position:relative;
-  padding: 0.5rem 1rem;
+ 
+ 
   color:#000000f4;
-  font-size: medium;
-  font-weight: 500;
+  
+  
   transition: color 0.5s ease-in-out;
+  z-index: 1;
   
 }
 
@@ -28,16 +32,18 @@
 
 /* Add the line under the link items */
 .navbar-link::after {
-  content: '';
-  position: absolute;
+  content: "";
+  position: relative;
+  display:block;
   padding-top: 0%;
-  bottom: 0;
+  bottom: 1px;
   left: 0;
   width: 0;
-  height: 2px;
-  border-radius: 100px ;
+  height: 3px;
+  border-radius: 16px ;
   background-color: #aa03f8dd;
   /* Line color */
+  z-index: -1;
   transition: width 0.3s ease-in-out;
 }
 
@@ -46,6 +52,21 @@
 .navbar-link.active::after {
   width: 100%;
   text-align: center;
-  border-radius: 100px ;
+  
 }
-
+@media (max-width: 800px) {
+  .navbar {
+    padding: 1rem 2rem !important;
+    font-size: 2rem !important;
+    
+    text-align: center!important;
+  }
+  .navbar-link:hover::after,
+  .navbar-link.navbar-link.active::after{
+    display: none !important;
+   
+  }
+}
+.navbar-nav .navbar-link {
+  margin: 10px 10px 10px 10px!important; /* You can adjust this value as needed */
+}
