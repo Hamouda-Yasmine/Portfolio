@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import NavBar from './components/NavBar'
 
 
+
 function App() {
 
 
@@ -22,10 +23,10 @@ function App() {
  
       
        <BrowserRouter >
-
+        
         <NavBar/>
      
-      
+        
  
          <Routes>
           <Route path='/' element={<Home />}></Route>

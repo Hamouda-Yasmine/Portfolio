@@ -1,43 +1,112 @@
-import React, { useEffect, useState } from 'react'
+
 import { Col, Container, Row } from 'react-bootstrap'
-import headerImg from "../assets/img/desktop-workstation (2).png";
+import homeimg from "../assets/img/about.png";
+import { AiFillGithub, AiOutlineTwitter} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import Typewriter from 'typewriter-effect';
+import Tilt from "react-parallax-tilt";
+import './Home.css'
 
 function Home() {
-  const text='Hello there! I am Yasmine Hamouda, a passionate and creative software developer with a love for crafting elegant solutions. Welcome to my digital sanctuary, where I showcase my journey through the world of coding and design.';
-  const speed=100;
-  const [visibleText, setVisibleText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (currentIndex === text.length) {
-        clearInterval(interval); // Stop the typing effect when all text is shown
-      } else {
-        setVisibleText((prevText) => prevText + text[currentIndex]);
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-      }
-    }, speed);
+  const textGroups = [
+    {
+      text: '( Backend )',
+      deleteCount: 11,
+    },
+    {
+      text: '( Frontend )',
+      deleteCount: 12,
+    },
+  ];
 
-    return () => {
-      clearInterval(interval); // Clean up the interval on component unmount
-    };
-  }, [currentIndex, speed, text]);
+  
   return (
-    <section className='home'>
-      <Container>
-      <Row className="aligh-items-center">
-        <Col xs={10} md={6} xl={6.5}>
-          <span className='tagline'>Welcome into my Portfolio.</span>
-          <h1> <span className='wrap'>{visibleText}</span></h1>
+<section className='home'>
+  <Container >
+    <Row className="aligh-items-center">
+      <Col xs={10} md={6} xl={6.5}>
+        <span className='tagline'>Welcome into my Portfolio.</span>
+        <span className="wave" role="img" aria-labelledby="wave">👋</span>
+        <Typewriter   
+      onInit={(typewriter) => {
+      typewriter.changeDelay(30)
+      .typeString('Hello there! <span className="wave" role="img" aria-labelledby="wave">👋</span> </br> ')
+      
+      .typeString('I am <strong>Yasmine Hamouda </strong> a passionate and creative Software Engineer and Web Developer ')
+      
+      
+      textGroups.forEach((group) => {
+        typewriter.changeDelay(50)
+          .typeString(group.text)
+          .pauseFor(300)
+          .deleteChars(group.deleteCount);
+      });
+
+      typewriter
+     
+      .typeString("Welcome into my digital sanctuary, where I showcase my journey through the world of ")
+      .typeString('<span style="color: ##4a4545; font-family: Courier New, monospace;"> _Coding <span  role="img" >🤖</span> </span>')
+      .typeString(" and ")
+      .typeString('<span  style="color: #911D91"> Design! <span  role="img" >🎨</span></span>.')
+      
+      .start();
+      ;}} />
+      </Col>
+
+      <Col xs={10} md={5} xl={4}>
+        <Tilt>
+          <img src={homeimg} alt="Header Img"/>
+        </Tilt>
+        
+      </Col>
+    </Row>
 
 
-        </Col>
-        <Col xs={10} md={5} xl={4}>
-        <img src={headerImg} alt="Header Img"/>
+    <Row>
+      <Col md={12} className="home-about-social">
+            <h1>FIND ME ON</h1>
+            <p>
+              Feel free to <span className="purple">connect </span>with me
+            </p>
+            <ul className="home-about-social-links">
+              <li className="social-icons">
+                <a
+                  href="https://github.com/sukrutrahane"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiFillGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://twitter.com/sukrutrahane"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiOutlineTwitter />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/sukrutrahane/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+            
+            </ul>
         </Col>
       </Row>
-      </Container>
-    </section>
+
+  </Container>
+</section>
   )
 }
 

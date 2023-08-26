@@ -14,8 +14,8 @@ body {
  
   overflow-x: hidden;
   background-size: cover;
-  background-repeat: no-repeat;
-  background: linear-gradient(180deg, #d3f1fc, #f0afffd9) !important;
+  background-repeat: no-repeat!important;
+  background: linear-gradient(180deg, rgba(177, 237, 254, 0.5) -5.91%,rgba(216, 114, 247, 0.5) 111.58%) !important;
 
  
   font-family: Arial, Helvetica, sans-serif;
@@ -23,43 +23,6 @@ body {
 
 
 
-/************ Home Css ************/
-.home {
-  margin-top: 0;
-  padding: 100px 0 100px 0;
- 
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.home .tagline {
-  font-weight: 1000;
-  letter-spacing: 0.8px;
-  padding: 8px 20px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 253, 253, 0.5);
-  font-size: 40px;
-  margin-bottom: 16px;
-  display: inline-block;
-}
-.home h1 {
-  color: #55598b;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.25;
-  margin-bottom: 20px;
-  display: block;
-}
-.home p {
-  color: #B8B8B8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  width: 96%;
-}
-.home img{
-  height: 500px;}
 
 
 
@@ -112,12 +75,6 @@ body {
 
 
 
-/************ Footer Css ************/
-.footer {
-  padding: 300px 0 0 0;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 
 
