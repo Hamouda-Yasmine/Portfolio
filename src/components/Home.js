@@ -1,13 +1,15 @@
 
 import { Col, Container, Row } from 'react-bootstrap'
 import homeimg from "../assets/img/about.png";
-import { AiFillGithub, AiOutlineTwitter} from "react-icons/ai";
+import { AiFillGithub} from "react-icons/ai";
+import {MdEmail}from "react-icons/md"
 import { FaLinkedinIn } from "react-icons/fa";
 import Typewriter from 'typewriter-effect';
 import Tilt from "react-parallax-tilt";
 import './Home.css'
 
 function Home() {
+ 
 
   const textGroups = [
     {
@@ -24,16 +26,16 @@ function Home() {
   return (
 <section className='home'>
   <Container >
-    <Row className="aligh-items-center">
-      <Col xs={10} md={6} xl={6.5}>
-        <span className='tagline'>Welcome into my Portfolio.</span>
-        <span className="wave" role="img" aria-labelledby="wave">👋</span>
+    <Row >
+      <Col md={7}>
+        
+        <h1>Hello there! <span className="wave" role="img" aria-labelledby="wave">👋🏻</span></h1>
+        <h1>I'm <strong>Yasmine Hamouda </strong></h1>
+        
         <Typewriter   
       onInit={(typewriter) => {
-      typewriter.changeDelay(30)
-      .typeString('Hello there! <span className="wave" role="img" aria-labelledby="wave">👋</span> </br> ')
-      
-      .typeString('I am <strong>Yasmine Hamouda </strong> a passionate and creative Software Engineer and Web Developer ')
+      typewriter.changeDelay(50)
+      .typeString('A passionate and creative Software Engineer and Web Developer ')
       
       
       textGroups.forEach((group) => {
@@ -45,34 +47,28 @@ function Home() {
 
       typewriter
      
-      .typeString("Welcome into my digital sanctuary, where I showcase my journey through the world of ")
-      .typeString('<span style="color: ##4a4545; font-family: Courier New, monospace;"> _Coding <span  role="img" >🤖</span> </span>')
-      .typeString(" and ")
+      .typeString(' . </br> <strong> </strong>  Welcome into my digital sanctuary, where I showcase my journey through the world of ').changeDelay(30)
+      .typeString('<span style="color: ##4a4545; font-family: Courier New, monospace;"> Coding <span  role="img" >🤖</span> </span>')
+      .typeString("and")
       .typeString('<span  style="color: #911D91"> Design! <span  role="img" >🎨</span></span>.')
       
       .start();
       ;}} />
       </Col>
 
-      <Col xs={10} md={5} xl={4}>
+      <Col md={5} className='img-home'>
         <Tilt>
-          <img src={homeimg} alt="Header Img"/>
+          <img src={homeimg} alt="home Img" style={{ maxHeight: "500px" }} className='img-fluid'/>
         </Tilt>
         
       </Col>
-    </Row>
-
-
-    <Row>
-      <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
+      <Col  className="home-social">
+            <h2 style={{paddingBottom:"10px"}}> Feel free to <strong>Connect </strong>with me</h2>
+          
+            <ul  style={{paddingLeft:'40px !important'}}>
               <li className="social-icons">
                 <a
-                  href="https://github.com/sukrutrahane"
+                  href="https://github.com/Hamouda-Yasmine"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -82,17 +78,17 @@ function Home() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/sukrutrahane"
+                  href=""
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiOutlineTwitter />
+                  <MdEmail />
                 </a>
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/sukrutrahane/"
+                  href=""
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -103,7 +99,10 @@ function Home() {
             
             </ul>
         </Col>
-      </Row>
+    </Row>
+
+
+    
 
   </Container>
 </section>
