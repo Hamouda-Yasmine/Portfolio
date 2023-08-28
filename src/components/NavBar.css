@@ -1,33 +1,19 @@
 /* YourComponent.css */
 
 .navbar{
-
-  backdrop-filter: blur(5px);
-  font-size: 1.2rem !important;
-
-  color: rgb(4, 4, 4);
-  transition: all 0.3s ease-out 0s !important;
-  padding-top:20px!important;
- 
-  
+ font-size: 1.2rem !important;
+ transition: all 0.3s ease-out 0s !important;
+ padding-top:10px!important;
 }
 .navbar-link {
- 
- 
-  color:#000000f4;
-  
-  
-  transition: color 0.5s ease-in-out;
-  z-index: 1;
-  
+ color:#000000f4;
+ transition: color 0.5s ease-in-out;
+ z-index: 1;
 }
 
 .navbar-link.active {
-  color:#aa03f8dd!important;
-  
+  color:#b562d6!important;
   backdrop-filter: blur(100px);
-   
-
 }
 
 /* Add the line under the link items */
@@ -41,7 +27,7 @@
   width: 0;
   height: 3px;
   border-radius: 16px ;
-  background-color: #aa03f8dd;
+  background-color: #b562d6;
   /* Line color */
   z-index: -1;
   transition: width 0.3s ease-in-out;
@@ -54,19 +40,38 @@
   text-align: center;
   
 }
-@media (max-width: 800px) {
+
+.cv-button{
+  background-color: linear-gradient(to bottom, #0a0112, #001eff)!important; /* Mix of purple and blue */
+  color: rgb(86, 13, 132)!important;
+  border: none!important;
+  border-radius: 20px!important; /* Make it round */
+  padding: 5px 20px!important;
+
+  cursor: pointer;
+  box-shadow: 0px 0px 30px 5px rgba(183, 2, 248, 0.6); /* Purple shadow */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cv-button:hover{
+  transform: scale(1.05); /* Slightly grow the button on hover */
+  box-shadow: 0px 0px 40px 10px rgba(138, 43, 226, 0.8); /* Increase shadow on hover */
+}
+@media (max-width: 700px) {
   .navbar {
-    padding: 1rem 2rem !important;
-    font-size: 2rem !important;
+    padding: 0.5rem 0.5rem !important;
+    font-size: 1.12rem !important;
     
     text-align: center!important;
   }
   .navbar-link:hover::after,
   .navbar-link.navbar-link.active::after{
     display: none !important;
-   
+   font-size: 10px !important;
   }
 }
-.navbar-nav .navbar-link {
-  margin: 10px 10px 10px 10px!important; /* You can adjust this value as needed */
-}
+
+
+
+
+
+

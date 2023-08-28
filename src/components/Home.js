@@ -62,10 +62,10 @@ function Home() {
         </Tilt>
         
       </Col>
-      <Col  className="home-social">
+      <Col   className="home-social ">
             <h2 style={{paddingBottom:"10px"}}> Feel free to <strong>Connect </strong>with me</h2>
           
-            <ul  style={{paddingLeft:'40px !important'}}>
+            <ul className='list-icons'  >
               <li className="social-icons">
                 <a
                   href="https://github.com/Hamouda-Yasmine"
@@ -78,7 +78,7 @@ function Home() {
               </li>
               <li className="social-icons">
                 <a
-                  href=""
+                  href="mailto:hamouda.yasmine9@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -88,7 +88,7 @@ function Home() {
               </li>
               <li className="social-icons">
                 <a
-                  href=""
+                  href="https://www.linkedin.com/in/yasmine-hamouda-70070924b"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"

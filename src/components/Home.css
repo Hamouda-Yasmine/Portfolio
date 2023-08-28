@@ -71,10 +71,17 @@
       }
    
       
-      @media (max-width: 800px) {
+      @media (max-width: 700px) {
         .img-home {
           padding-top: 11em !important;
           padding-bottom: 2em !important;
+        }
+        .home-social{
+          text-align: center;
+
+        }
+        .list-icons{
+          padding-left: 15px!important;
         }
       }
 
@@ -124,15 +131,19 @@
         color: #87209e;
         box-shadow: 0 0 5px #87209e;
         text-shadow: 0 0 2px #87209e;
+       
+         
       }
       
       .social-icons {
         display: inline-block !important;
-        padding-right: 15px;
+        padding-right: 20px;
         padding-left: 20px;
        
       }
-      
+      .list-icons{
+        padding-left: 60px;
+      }
       .icon-colour {
         color: #b562d6 !important;
       }
