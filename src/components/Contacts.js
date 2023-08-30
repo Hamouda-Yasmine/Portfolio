@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { Button, Col, Container,  Form,  Row } from 'react-bootstrap'
+import { Button, Col, Container,  Form,   Row } from 'react-bootstrap'
 import emailjs from '@emailjs/browser'
 import './Contact.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
 
 function Contacts() {
   const formInputs={
@@ -12,17 +11,30 @@ function Contacts() {
     message:'',
     subject:''
 }
+
  const [inputs,setInputs]=useState(formInputs)
- 
  const [loading,setLoading]=useState(false)
+ const [showvalidation, setShowValidation] = useState(false);
+
+
  const formUpdate=(e) => {
  const {name,value}=e.target;
  setInputs({...inputs,[name]: value})
 }
+
+
 const sendMessage=(e)=>{
   e.preventDefault();
+
+    const form = e.currentTarget;
+    if (!form.checkValidity()) {
+      setShowValidation(true);
+      return;
+    }
+
+  setShowValidation(false);
   setLoading(true);
-     // Configure your email service credentials
+     // Configure  email service credentials
      const serviceID = 'service_qqk7x7d';
      const templateID = 'template_pyeqni9';
      const userID = 'ni2Z2A4U1u0-T18Ug';
@@ -59,6 +71,10 @@ const sendMessage=(e)=>{
 
 };
 
+
+
+
+
   return (
     <section className='contact-form' id="connect">
       <Container>
@@ -70,40 +86,97 @@ const sendMessage=(e)=>{
           <Col sm={7}>
             <h1>Get In Touch</h1>
             
-         <Form onSubmit={sendMessage}>
-      <Row >
-        <Form.Group as={Col} >
-         
-          <Form.Control  size='lg'type="text" name='name' value={inputs.name} placeholder='Your name' onChange={formUpdate} className='input' required/>
-        </Form.Group>
+            <Form noValidate showvalidation={showvalidation} onSubmit={sendMessage}>
+              <Row className='mb-3' >
+                <Form.Group as={Col}>
+                  <Form.Control
+                    
+                    type='text'
+                    name='name'
+                    value={inputs.name}
+                    placeholder='Your name'
+                    onChange={formUpdate}
+                    className='input'
+                    required
+                    isInvalid={showvalidation && !inputs.name}
+                    isValid={showvalidation && inputs.name}
+                  />
+                  <Form.Control.Feedback type='invalid'> Please provide a valid name. </Form.Control.Feedback>
+                  
+                </Form.Group>
 
-        <Form.Group as={Col} >
-          
-          <Form.Control size='lg' type="email" name='email' value={inputs.email} placeholder='Your Email' onChange={formUpdate} className='input' required/>
-        </Form.Group>
-        
-      </Row>
+                <Form.Group as={Col}>
+                  <Form.Control
+                    
+                    type='email'
+                    name='email'
+                    value={inputs.email}
+                    placeholder='Your Email'
+                    onChange={formUpdate}
+                    className='input'
+                    required
+                    isInvalid={showvalidation && (!inputs.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputs.email))}
+                    isValid={showvalidation && inputs.name}
+                  />
+                  <Form.Control.Feedback type='invalid'>Please provide a valid email.</Form.Control.Feedback>
+                  
+                </Form.Group>
+              </Row>
+               <Row>
+               <Form.Group className='mb-3'>
+                <Form.Control
+                 
+                  type='text'
+                  name='subject'
+                  value={inputs.subject}
+                  placeholder='The subject'
+                  onChange={formUpdate}
+                  className='input'
+                  required
+                  isInvalid={showvalidation && !inputs.subject}
+                  isValid={showvalidation && inputs.name}
+                />
+                <Form.Control.Feedback type='invalid'>
+                  Please provide a valid subject.
+                </Form.Control.Feedback>
+                
+              </Form.Group>
+               </Row>
+              
+                 <Row>
+                 <Form.Group className='mb-3'>
+                <Form.Control
+                 
+                  as='textarea'
+                  rows={7}
+                  name='message'
+                  value={inputs.message}
+                  placeholder='Message'
+                  onChange={formUpdate}
+                  required
+                  isInvalid={showvalidation && !inputs.message}
+                  isValid={showvalidation && inputs.name}
+                />
+                <Form.Control.Feedback type='invalid'>
+                  Please provide a valid message.
+                </Form.Control.Feedback>
+                
+              </Form.Group>
 
-      <Form.Group className="mb-3">
-        <Form.Control size='lg'type="text" name='subject' value={inputs.subject} placeholder='The subject' onChange={formUpdate} className='input' required/>
-      </Form.Group>
-
-      <Form.Group className="mb-3" >
-       
-        <Form.Control size='lg' as="textarea" rows={7} name='message' value={inputs.message} placeholder='Message'onChange={formUpdate} required/>
-        
-      </Form.Group>
-
-     
-
-
-      <Button variant="primary" type="submit">
-      <span>{loading?'is louding...':'Send'}</span>
-      </Button>
-    </Form>
+                 </Row>
+                 <div className='text-end mt-1'>
+                 <Button  className=' purple-button'  type='submit'>
+                <span>{loading ? 'Loading...' : 'Send the message'}</span>
+              </Button>
+              </div>
+              
+            </Form>
        
           </Col>
         </Row>
+
+
+    
     
       </Container>
      

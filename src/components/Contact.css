@@ -1,35 +1,42 @@
 /* Contact.css */
 .contact-form{
-  padding: 80px 0 100px 0;
+  padding: 50px 0 80px 0;
 }
 .contact-form h1 {
     font-size: 50px!important;
     margin-bottom: 30px;
+    color: #03030394;
   }
   
  
   
  .contact-form input{
-   
+   height:45px;
     margin-bottom: 20px;
-    border: 1px solid #aa03f8dd;
+    border: 2px solid #b356d8;
      border-radius: 50px ;
+     background: rgba(254, 243, 254, 0) !important;
   }
   .contact-form input:focus,
   .contact-form textarea:focus {
-    border-color: #c300ffbc ; /* Change to your desired focus border color */
-    box-shadow: 0 0 0 0.2rem rgba(255, 0, 247, 0.477); /* Adjust as needed */
+    border-color: #b562d6; ; /* Change to your desired focus border color */
+    box-shadow: 0 0 0 0.2rem #b562d662;; /* Adjust as needed */
   }
 
   
   .contact-form textarea{
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #aa03f8dd;
-  
+    border: 2px solid #b562d6;
+    background: rgba(254, 243, 254, 0) !important;
     border-radius: 30px;
   }
-  
+  .purple-button {
+    background-color: #b562d6!important;
+    color: rgb(255, 255, 255) !important;
+    border-color: rgba(128, 0, 128, 0.493)!important;
+    border-radius: 20px!important;
+  }
  
 
   
