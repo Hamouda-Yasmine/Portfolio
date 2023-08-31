@@ -1,13 +1,13 @@
 import './App.css';
-import Home from './components/Home';
-import Education from './components/Education';
-import Skills from './components/Skills';
-import Mywork from './components/Mywork';
-import Contacts from './components/Contacts';
+import Home from './components/home/Home';
+import Education from './components/education/Education';
+import Skills from './components/skills/Skills';
+import Mywork from './components/project/Mywork';
+import Contacts from './components/contact/Contacts';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
-import NavBar from './components/NavBar'
+import Footer from './components/footer/Footer';
+import NavBar from './components/navbar/NavBar'
 
 
 

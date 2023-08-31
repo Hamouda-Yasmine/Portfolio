@@ -26,19 +26,19 @@ function Mywork() {
     <div>      
       <Carousel responsive={responsive} infinite={true} className='skill-slider'>
     <div className="item">
-                        <img src={''} alt="Image" />
+                        
                         <h5>Web Development</h5>
                     </div>
                     <div className="item">
-                        <img src={''} alt="Image" />
+                      
                         <h5>Brand Identity</h5>
                     </div>
                     <div className="item">
-                        <img src={''} alt="Image" />
+                       
                         <h5>Logo Design</h5>
                     </div>
                     <div className="item">
-                        <img src={''} alt="Image" />
+                       
                         <h5>Web Development</h5>
                     </div>
      </Carousel></div>

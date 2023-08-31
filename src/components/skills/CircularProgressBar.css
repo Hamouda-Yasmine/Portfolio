@@ -6,11 +6,12 @@
   
   .progress {
     fill: none;
-    stroke: #aaf5fa;
+    stroke: #8feff5;
     stroke-width: 5;
     stroke-linecap: round;
     stroke-dasharray: 0 100;
     transition: stroke-dasharray 1s ease-in-out;
+    position: relative;
   }
   
 .circle-container{
