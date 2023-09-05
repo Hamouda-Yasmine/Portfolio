@@ -32,11 +32,11 @@ function Education() {
    //const timelineExperience=[]
   return (
     <section className='education'>
-  <Container>
-   <h4 style={{textAlign:'center',marginBottom:'10px',color:'gray'}}>My personal journey</h4>
+  <Container  >
+   <h4 style={{textAlign:'center',marginBottom:'20px',color:'#6a6a6a',fontSize:'40px'}}><strong>My personal journey</strong></h4>
   <div className='education-bx'>
-  <Button color="secondary" style={{marginRight:'20px',marginBottom:'20px',background:selectedSection==='education'?'#f0b3f9a3':''}} onClick={()=>{setSelectedSection('education')}}>Education</Button>
-  <Button color="secondary" style={{marginLeft:'20px',marginBottom:'20px',background:selectedSection==='experience'?'#f0b3f9a3':''}} onClick={()=>{setSelectedSection('experience')}}>experience</Button>
+  <Button color="secondary" style={{marginRight:'20px',marginBottom:'10px',background:selectedSection==='education'?'#f0b3f9a3':''}} onClick={()=>{setSelectedSection('education')}}>Education</Button>
+  <Button color="secondary" style={{marginLeft:'20px',marginBottom:'10px',background:selectedSection==='experience'?'#f0b3f9a3':''}} onClick={()=>{setSelectedSection('experience')}}>experience</Button>
  
   
   {selectedSection==='education'? <TimeLineMui education={timelineEducation} certificate={timelineCertificate}/> : null}

@@ -1,14 +1,15 @@
 /************ Home Css ************/
 .home {
   
-  padding-top: 80px;
+  padding-top: 50px;
    
   
   }
 
   .home h1 {
-    font-size:2.7em !important;
+    font-size:2.6em !important;
     color: #050505 !important;
+    padding-top: 10px;
   }
   .home strong {
     color: #b562d6;
@@ -16,7 +17,8 @@
   }
  
     .Typewriter__wrapper {
-        font-size: 1.7em !important;
+      padding-top: 10px;
+        font-size: 1.6em !important;
         color: #050505 !important;
        
       }
@@ -88,8 +90,8 @@
 
       .home-social {
         
-       padding-bottom: 80px;
-       
+       padding-bottom: 70px!important;
+      
       }
       
       
@@ -147,3 +149,4 @@
       .icon-colour {
         color: #b562d6 !important;
       }
+     

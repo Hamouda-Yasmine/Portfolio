@@ -1,6 +1,6 @@
 
 import { Col, Container, Row } from 'react-bootstrap'
-import homeimg from "../../assets/img/about.png";
+import homeimg from "../../assets/img/office final.png";
 import { AiFillGithub} from "react-icons/ai";
 import {MdEmail}from "react-icons/md"
 import { FaLinkedinIn } from "react-icons/fa";
@@ -26,8 +26,8 @@ function Home() {
   return (
 <section className='home'>
   <Container >
-    <Row >
-      <Col md={7}>
+    <Row xs={1} md={2}>
+      <Col style={{paddingTop:'50px'}}>
         
         <h1>Hello there! <span className="wave" role="img" aria-labelledby="wave">👋🏻</span></h1>
         <h1>I'm <strong>Yasmine Hamouda </strong></h1>
@@ -56,13 +56,13 @@ function Home() {
       ;}} />
       </Col>
 
-      <Col md={5} className='img-home'>
+      <Col   xs={6} md={6}  style={{paddingTop:'10px'}} >
         <Tilt>
-          <img src={homeimg} alt="home Img" style={{ maxHeight: "500px" }} className='img-fluid'/>
+          <img src={homeimg} alt="home Img" className="img-fluid"  />
         </Tilt>
         
       </Col>
-      <Col   className="home-social ">
+      <Col className="home-social ">
             <h2 style={{paddingBottom:"10px"}}> Feel free to <strong>Connect </strong>with me</h2>
           
             <ul className='list-icons'  >
@@ -99,9 +99,12 @@ function Home() {
             
             </ul>
         </Col>
+      
     </Row>
 
-
+    <Row >
+     
+      </Row>
     
 
   </Container>

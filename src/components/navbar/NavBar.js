@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function NavBar() {
   const [activeRoute,setActiveRoute]=useState();
   const CVPdf='/Yasmine-Hamouda-CV.pdf'
+
   useEffect(()=>{
     const path=window.location.pathname;
     setActiveRoute(path.slice(1,path.length));
