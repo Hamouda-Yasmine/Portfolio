@@ -68,6 +68,10 @@
     display: none !important;
    font-size: 10px !important;
   }
+  .cv-button{
+    margin-top: 20px!important;
+    text-align: center!important;
+  }
 }
 
 

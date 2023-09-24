@@ -25,7 +25,7 @@ function Home() {
   
   return (
 <section className='home'>
-  <Container >
+  <Container  style={{display:"flex"}}>
     <Row xs={1} md={2}>
       <Col style={{paddingTop:'50px'}}>
         
@@ -56,12 +56,13 @@ function Home() {
       ;}} />
       </Col>
 
-      <Col   xs={6} md={6}  style={{paddingTop:'10px'}} >
+      <Col className='home-img'  style={{paddingTop:'10px'}} >
         <Tilt>
           <img src={homeimg} alt="home Img" className="img-fluid"  />
         </Tilt>
         
       </Col>
+  
       <Col className="home-social ">
             <h2 style={{paddingBottom:"10px"}}> Feel free to <strong>Connect </strong>with me</h2>
           
@@ -102,9 +103,7 @@ function Home() {
       
     </Row>
 
-    <Row >
-     
-      </Row>
+    
     
 
   </Container>

@@ -22,8 +22,10 @@
     text-align: center !important;
   }
 
-  .footer-body {
-    text-align: center !important;
+  
+  .footer-icons{
+ text-align: center!important;
+ margin-left: -90px!important;
   }
 }
 

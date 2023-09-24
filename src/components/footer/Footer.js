@@ -11,10 +11,7 @@ function Footer() {
     <footer className="footer">
       <Container >
       <Row>
-        <Col md="4" className="footer-logo">
-          <img  alt='logo' src=''/>
-          
-        </Col>
+       <Col ></Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} Yasmine Hamouda</h3>
         </Col>

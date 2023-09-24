@@ -48,12 +48,14 @@ function Skills() {
             <h2>
              <HiOutlineBadgeCheck/> Qualities
             </h2>
-            
+           
             <CircularProgressBar text="Creativity" percentage={90}/>
             <CircularProgressBar text="Diplomacy" percentage={80}/>
             <CircularProgressBar text="Flexibility" percentage={90}/>
             <CircularProgressBar text="Adaptability" percentage={90}/>
             
+          
+           
           </div>
           </Col>
         </Row>

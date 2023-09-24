@@ -1,7 +1,7 @@
 /************ Home Css ************/
 .home {
   
-  padding-top: 50px;
+  padding-top: 60px;
    
   
   }
@@ -24,18 +24,8 @@
       }
       .Typewriter__cursor {
         font-size: 2.4em !important;
-        color: #b562d6 !important;
-      } 
-      @media (max-width: 767px) {
-        .Typewriter__wrapper {
-          font-size: 1.4em !important;
-          font-weight: 500 !important;
-          position: absolute !important;
-        }
-        .Typewriter__cursor {
-          display: none !important;
-        }
-      } 
+        color: #b562d6 !important;}
+   
 
       .wave {
         animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
@@ -73,19 +63,7 @@
       }
    
       
-      @media (max-width: 700px) {
-        .img-home {
-          padding-top: 11em !important;
-          padding-bottom: 2em !important;
-        }
-        .home-social{
-          text-align: center;
-
-        }
-        .list-icons{
-          padding-left: 15px!important;
-        }
-      }
+    
 
 
       .home-social {
@@ -149,4 +127,25 @@
       .icon-colour {
         color: #b562d6 !important;
       }
+    
+    @media (max-width: 767px) {
+      .Typewriter__wrapper {
+        font-size: 1.3em !important;
+        font-weight: 500;
+      }
+      .home-social{
+        text-align: center!important;
+        padding-bottom: 50px!important;
+        padding-top: 50px!important;
+      }
+      .list-icons{
+        
+        padding-left: 0px;
+      }
+    
+     
+     
+     
+    } 
+      
      
