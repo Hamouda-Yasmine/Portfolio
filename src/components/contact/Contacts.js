@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Col, Container,  Form,   Row } from 'react-bootstrap'
 import emailjs from '@emailjs/browser'
 import './Contact.css'
-import contactimg from "../../assets/img/pc final (2).png";
+import contactimg from "../../assets/img/pc final.png";
 
 
 function Contacts() {
