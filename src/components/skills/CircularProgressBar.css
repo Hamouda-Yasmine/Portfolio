@@ -2,6 +2,7 @@
 .circular-progress {
     width: 100px;
     height: 100px;
+    position: relative !important;
   }
   
   .progress {
@@ -18,6 +19,15 @@
     display: inline-block;
     margin: 10px 20px;
     text-align: center;
+    position: relative;
+}
+@media ( max-width: 767px) {
+  .circular-progress {
+    width: 90px;
+    height: 90px;
+    position: relative !important;
+  }
+
 }
 
   

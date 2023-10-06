@@ -9,10 +9,10 @@ function Education() {
   const [selectedSection,setSelectedSection]=useState('education');
   
  const timelineEducation = [
-    { level: 'Masters degree in software engineering',
+    { level: `Master's degree in software engineering`,
       place:'Abdelhamid Mehri University, Constantine' ,
       year:2022},
-      { level: 'Bachelor degree in software engineering',
+      { level: `Bachelor's degree in software engineering`,
       place:'Abdelhamid Mehri University, Constantine' ,
       year:2020},
       { level: 'Baccalaureate',
