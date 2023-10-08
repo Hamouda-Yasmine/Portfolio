@@ -27,6 +27,12 @@
     height: 90px;
     position: relative !important;
   }
+      .circle-container{
+    display: inline-block;
+    margin: 10px 25px 20px 10px;
+    text-align: center!important;
+    position: relative!important;
+}
 
 }
 
