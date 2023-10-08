@@ -18,7 +18,7 @@ function Skills() {
           <Col>
           <div className='skill-bx'>
             <h2>
-             <BiCodeCurly/> Backend
+             <BiCodeCurly/> Back-end
             </h2>
             <Progressbar text="Java" percentage={90} />
             <Progressbar text="J2EE" percentage={90} />
@@ -32,7 +32,7 @@ function Skills() {
           <Col>
           <div className='skill-bx'>
             <h2>
-             <BiCodeAlt/> Frontend
+             <BiCodeAlt/> Front-end
             </h2>
           <Progressbar text="Html" percentage={80}/>
           <Progressbar text="CSS" percentage={60}/>
