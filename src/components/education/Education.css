@@ -1,6 +1,6 @@
 .education{
   
-    padding: 38px 50px 60px 50px;
+   padding: 39px 0px 20px 0px;
    flex:content;
     background-position: top center;
     background-size: cover;
@@ -15,7 +15,7 @@
     text-align: center !important;
    flex: content;
      padding-bottom: 50px;
-      padding: 30px 10px 10px 30px;
+     padding-top:30px;
       box-shadow: rgba(67, 67, 91, 0.086) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
    
    
