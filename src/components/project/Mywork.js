@@ -1,47 +1,37 @@
 import React from 'react'
-import Carousel from 'react-multi-carousel';
-
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 function Mywork() {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+ 
   
   return (
-    <div>      
-      <Carousel responsive={responsive} infinite={true} className='skill-slider'>
-    <div className="item">
-                        
-                        <h5>Web Development</h5>
-                    </div>
-                    <div className="item">
-                      
-                        <h5>Brand Identity</h5>
-                    </div>
-                    <div className="item">
-                       
-                        <h5>Logo Design</h5>
-                    </div>
-                    <div className="item">
-                       
-                        <h5>Web Development</h5>
-                    </div>
-     </Carousel></div>
+    <section className='project'>
+      <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+        image="/static/images/cards/contemplative-reptile.jpg"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Lizard
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+
+    </section>
   )
 }
 
