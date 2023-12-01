@@ -3,7 +3,7 @@ import  React from 'react';
 
 import { Container } from 'react-bootstrap';
 import Card from './Card';
-import { Badge, Box, Heading, VStack } from '@chakra-ui/react';
+import {  Box, Heading, VStack } from '@chakra-ui/react';
 import { Divider, Stack } from '@mui/material';
 function Mywork() {
   const projects = [
