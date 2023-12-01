@@ -21,11 +21,20 @@ function Education() {
    ];
 
    const timelineCertificate = [
+    
+    { name: 'Introduction to Containers w/ Docker, Kubernetes & OpenShift (IBM)',
+    place:'coursera' ,
+    year:2023},
+    { name: 'Developing Back-End Apps with Node.js and Express (IBM)',
+      place:'coursera' ,
+      year:2023},
+    { name: 'Advanced React (Meta)',
+      place:'coursera' ,
+      year:2023},
     { name: 'React Basics (Meta)',
       place:'coursera' ,
       year:2023},
       { name: 'CCNA 200-301 introduction to network',
-      place:'CISCO' ,
       year:'2022-2023'},
      
    ];
